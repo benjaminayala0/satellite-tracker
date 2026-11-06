@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Satellite Tracker",
+    "slug": "satellite-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "satellitetracker",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#070B14"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.telecom.satellitetracker",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Satellite Tracker requires GPS to compute satellite azimuth, elevation, and pass visibility windows relative to your ground position."
+      }
+    },
+    "android": {
+      "package": "com.telecom.satellitetracker",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_NETWORK_STATE",
+        "INTERNET",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Satellite Tracker to calculate satellite pass visibility for your location."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#00E5FF"
+        }
+      ]
+    ]
+  }
+}
+

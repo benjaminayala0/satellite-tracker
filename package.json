@@ -1,0 +1,48 @@
+{
+  "name": "satellite-tracker",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test:orbital": "node --experimental-strip-types src/algorithms/__tests__/orbitalMath.test.ts",
+    "test:prediction": "node --experimental-strip-types src/services/prediction/__tests__/passPrediction.test.ts",
+    "test:antimeridian": "node --experimental-strip-types src/algorithms/__tests__/antimeridian.test.ts",
+    "test": "npm run test:orbital && npm run test:prediction && npm run test:antimeridian"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^15.0.2",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-native-community/netinfo": "^11.4.1",
+    "expo": "~54.0.37",
+    "expo-constants": "~18.0.12",
+    "expo-file-system": "^18.0.0",
+    "expo-linking": "~7.1.3",
+    "expo-location": "~19.0.7",
+    "expo-network": "~8.0.8",
+    "expo-notifications": "~0.30.0",
+    "expo-router": "~5.1.0",
+    "expo-sensors": "~14.0.1",
+    "expo-sqlite": "~15.1.1",
+    "expo-status-bar": "~3.0.9",
+    "query-string": "^7.1.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.9.0",
+    "react-native-svg": "15.11.2",
+    "react-native-url-polyfill": "^2.0.0",
+    "react-native-web": "^0.21.4",
+    "satellite.js": "^5.0.0",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.10",
+    "typescript": "~5.9.2"
+  },
+  "private": true
+}
